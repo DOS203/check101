@@ -22,9 +22,11 @@
 
       </form>
       <br>
-       <form method="post" action="/users/{{user.id}}?_method=DELETE">
-      <input type="hidden" name="_method" value="DELETE">
-      <input type="submit" class="btn btn-danger btn-block" value="Deactivate Account">
+      {{!-- <form method="post" action="/users/{{user.id}}?_method=DELETE">
+      <input type="hidden" name="_method" value="DELETE"> --}}
+      {{!-- <input type="submit" class="btn btn-danger btn-block" value="Deactivate Account"> --}}
+      <a class="Link Link--alt Link--alt" href="/users/areusure">
+        <span class="Text small fwm"><span>Deactivate Account</span></span></a>
     </form>
 
     </div>
