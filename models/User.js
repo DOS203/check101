@@ -3,15 +3,10 @@ const Schema = mongoose.Schema;
 
 // Create Schema
 const UserSchema = mongoose.Schema({
-  firstname:{
+  name:{
     type: String,
     required: true
   },
-  lastname:{
-    type: String,
-    required: true
-  },
-  
   email:{
     type: String,
     required: true
@@ -24,15 +19,6 @@ const UserSchema = mongoose.Schema({
     type: Date,
     default: Date.now
   }
- 
-  // privilege:{
-  //   type: String,
-  //   required: false
-  // },
-  // id:{
-  //   type: String,
-  //   required: false
-  // },
 });
 
-module.exports = mongoose.model('User', UserSchema);
+module.exports = mongoose.model('users', UserSchema);
