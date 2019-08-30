@@ -13,6 +13,8 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-http": "^4.3.0",
     "connect-flash": "^0.1.1",
     "crypto": "^1.0.1",
     "express": "^4.17.1",
@@ -24,6 +26,14 @@
     "mongoose": "^4.13.19",
     "nodemailer": "^6.3.0",
     "passport": "^0.4.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "puppeteer": "^1.19.0",
+    "request": "^2.88.0",
+    "rewire": "^4.0.1",
+    "sinon": "^7.4.1",
+    "sinon-chai": "^3.3.0"
+  },
+  "devDependencies": {
+    "supertest": "^4.0.2"
   }
 }
