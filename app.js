@@ -77,7 +77,7 @@ app.get('/', (req, res) => {
 // About Route
 app.get('/about', (req, res) => {
   res.render('about');
-  return res.status(400);
+  return res.status(403);
 });
 
 app.get('/delivery', (req, res) => {

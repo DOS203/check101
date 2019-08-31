@@ -7,7 +7,7 @@
 // describe('Status and content', function() {
 //     describe ('Main page', function() {
 //         it('status', function(done){
-//             request('http://localhost:5000/', function(error, response, body) {
+//             request('https://release122.herokuapp.com/', function(error, response, body) {
 //                 expect(response.statusCode).to.equal(200);
 //                 done();
 //             });
@@ -18,7 +18,7 @@
 
 // describe ('About page', function() {
 //     it('status', function(done){
-//         request('http://localhost:5000/about', function(error, response, body) {
+//         request('https://release122.herokuapp.com/about', function(error, response, body) {
 //             expect(response.statusCode).to.equal(400);
 //             done();
 //         });
