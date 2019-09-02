@@ -1,3 +1,32 @@
+<script>
+var space = " ";
+var slash = "/";
+var comma = ", ";
+var address;
+var yA = "Your Address: ";
+var used;
+
+window.onload=function(){
+  document.getElementById("formSubmit").style.display='none';
+};
+
+function showData() {
+    if (document.getElementById("appNum").value != "") {
+      address = document.getElementById("appNum").value  + slash  + document.getElementById("streetNum").value  + space  + document.getElementById("streetName").value  + comma  + document.getElementById("suburbName").value  + comma + document.getElementById("postcodeNum").value + comma + document.getElementById("state").value;
+      document.getElementById('display').innerHTML = address;
+      document.getElementById('yourAddress').innerHTML = yA;
+      document.getElementById("formSubmit").style.display='block';
+
+    }
+    else {
+      address = document.getElementById("streetNum").value  + space  + document.getElementById("streetName").value  + comma  + document.getElementById("suburbName").value  + comma + document.getElementById("postcodeNum").value + comma + document.getElementById("state").value;
+      document.getElementById('display').innerHTML = address;
+      document.getElementById('yourAddress').innerHTML = yA;
+      document.getElementById("formSubmit").style.display='block';
+    }
+} 
+ 
+ <script>
  <center>
  <h1>
   Delivery System Prototype
@@ -5,7 +34,7 @@
 
   <form action="/courier">
     <h2>
-    Delivery Details
+    Delivery Details test
   </h2>
     Appartment Number:
     <input type="number" name="appNum" id="appNum" maxlength="5">

@@ -71,13 +71,11 @@ app.get('/', (req, res) => {
   res.render('index', {
     title: title
   });
-  return res.status(200);
 });
 
 // About Route
 app.get('/about', (req, res) => {
   res.render('about');
-  return res.status(403);
 });
 
 app.get('/delivery', (req, res) => {
@@ -97,7 +95,7 @@ app.use('/users', users);
 
 
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 2000;
 
 app.listen(port, () =>{
   console.log(`Server started on port ${port}`);

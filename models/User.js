@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 // Create Schema
-const UserSchema = mongoose.Schema({
+const UserSchema = new Schema({
   firstname:{
     type: String,
     required: true
@@ -24,6 +24,14 @@ const UserSchema = mongoose.Schema({
     type: Date,
     default: Date.now
   }
+  // privilege:{
+  //   type: String,
+  //   required: false
+  // },
+  // id:{
+  //   type: String,
+  //   required: false
+  // },
 });
 
-module.exports = mongoose.model('users', UserSchema);
+mongoose.model('users', UserSchema);

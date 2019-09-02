@@ -12,27 +12,27 @@ const User = mongoose.model('users');
 // User Login Route
 router.get('/login', (req, res) => {
   res.render('users/login');
-  return res.status(400);
 });
-//User forgot password
-router.get('/forgot', (req, res) => {
-  res.render('users/forgot');
-  
+// User areusure get
+router.get('/areusure', (req, res) => {
+  res.render('users/areusure');
 });
-
-//User forget password POST
 
 
 
 // User Register Route
 router.get('/register', (req, res) => {
   res.render('users/register');
-  return res.status(402);
 });
 
 // User Payment Route
 router.get('/payment', (req, res) => {
   res.render('users/payment');
+});
+
+// cart route
+router.get('/cart', (req, res)=>{
+  res.render('users/cart');
 });
 
 // User Payment POST
@@ -50,21 +50,13 @@ router.get('/edit/:id', ensureAuthenticated, (req, res) => {
     res.render('users/edit', {
       user:user
     });
-    
   });
-  return res.status(403);
 });
 
 // User Privilege get
 router.get('/privilege', (req, res) => {
   res.render('users/privilege');
 });
-
-// User areusure get
-router.get('/areusure', (req, res) => {
-  res.render('users/areusure');
-});
-
 
 // User privilege POST
 router.post('/privilege', (req, res, next) => {
@@ -166,11 +158,10 @@ router.put('/:id', ensureAuthenticated, (req, res) => {
 router.delete('/:id', ensureAuthenticated, (req, res) => {
   User.remove({_id: req.params.id})
     .then(() => {
-      req.flash('success_msg', 'Your account has been deactivated');
+      req.flash('success_msg', ' removed');
       res.redirect('/');
     });
 });
-
 
 
 // Logout User
